@@ -1,7 +1,8 @@
 # Netflix-GPT
  -Create react app
  -configuerd tailwind using Vite
-
+ -Header
+ -Login Form
 
 
 

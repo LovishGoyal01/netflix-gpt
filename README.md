@@ -1,10 +1,21 @@
 # Netflix-GPT
+
  -Create react app
  -configuerd tailwind using Vite
  -Header
+ -Routing of app
  -Login Form
-
-
+ -SignUp/SignIn Form
+ -Form validate
+ -useRef hook
+ -firebase setup
+ -Deploying our app to production
+ -create signUp user account
+ -Implement SignIn User Api
+ -Created redux store with user slice
+ -Implemented Sign out
+ -Updated Profile
+ 
 
 # Features
 -Login/Sign Up

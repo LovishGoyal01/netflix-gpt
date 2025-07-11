@@ -1,1 +1,24 @@
 @import "tailwindcss";
+
+@layer utilities {
+  /* WebKit browsers (Chrome, Safari, Opera) */
+  .no-scrollbar::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  .no-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  /* Firefox */
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+
+  /* IE & old Edge */
+  .no-scrollbar {
+    -ms-overflow-style: none;
+  }
+  
+}

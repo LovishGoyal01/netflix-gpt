@@ -28,7 +28,13 @@
  -Fetch Dta for trailor video
  -Update store with trailor video data
  -Embedde the Youtube video and make it autoplay and mute
- 
+ Tailwind Classes to make Main Container look awesome
+- Build Secondary Component
+- Build Movie List
+- build Movie Card
+- TMOB Image CDN URL
+- Make the Browser page amazing     with Tailwind CSS
+- usePopularMovies Custom hook
 
  
 

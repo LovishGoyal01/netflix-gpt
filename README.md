@@ -35,6 +35,9 @@
 - TMOB Image CDN URL
 - Make the Browser page amazing     with Tailwind CSS
 - usePopularMovies Custom hook
+-GPT search Feature
+-GPT search Bar
+-(BONUS) Multi-language Feature in our app
 
  
 

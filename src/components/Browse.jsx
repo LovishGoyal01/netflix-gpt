@@ -7,11 +7,12 @@ import useTopRatedMovies from "../hooks/useTopRatedMovies";
 import useTrendingMovies from "../hooks/useTrendingMovies";
 import useUpcomingMovies from "../hooks/useUpcomingMovies";
 import GptSearch from "./GptSearch";
-import { useSelector } from "react-redux";
-
+import { useDispatch, useSelector } from "react-redux";
+import { removeGptMovieResult } from "../utils/gptslice";
 
 const Browse = () => {
 
+   const dispatch = useDispatch();
    const showGptSearch=useSelector(store => store.gpt.showGptSearch);
     
    useNowPlayingMovies();
@@ -19,6 +20,11 @@ const Browse = () => {
    useTopRatedMovies();
    useTrendingMovies();
    useUpcomingMovies();
+
+   if(!showGptSearch)
+   {
+     dispatch(removeGptMovieResult());
+   }
 
     return(
        <div>

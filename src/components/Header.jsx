@@ -20,6 +20,7 @@ const Header = () => {
   const handleSignOut = () => {
     signOut(auth)
       .then(() => {
+        navigate("/browse");
       })
       .catch((error) => {
         console.log(error);
@@ -31,13 +32,20 @@ const Header = () => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
           if (user) 
             {
-             const {uid,email,displayname,photoURL} = user;
+             const {uid,email,displayName,photoURL} = user;
             
-              dispatch(addUser({uid:uid,email:email,displayname:displayname,photoURL:photoURL}));
-              navigate("/browse");
+              dispatch(addUser({uid:uid,email:email,displayName:displayName,photoURL:photoURL}));
+              
+              if(location.pathname === "/")
+                 {
+                  navigate("/browse")
+                 }
+
             } else {
                    dispatch(removeUser());
-                   navigate("/");
+                     if(location.pathname !== "/"){
+                       navigate("/")
+                       }  
                    }
           });
 

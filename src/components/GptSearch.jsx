@@ -7,7 +7,7 @@ const GptSearch = () => {
     return(
       
          <div className="relative min-h-screen ">
-          <img src={poster} alt="background-img" className="absolute"/>
+          <img src={poster} alt="background-img" className="fixed"/>
          
          <div className="relative">
            <GptSearchBar/>

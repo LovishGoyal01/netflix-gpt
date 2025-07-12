@@ -1,12 +1,12 @@
-import { useRef, useState } from "react"
-import Header from "./Header"
-import { checkValidData } from "../utils/validate";
+ import { useRef, useState } from "react"
+ import Header from "./Header"
+ import { checkValidData } from "../utils/validate";
 
 import { createUserWithEmailAndPassword,signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../utils/firebase"
 import { updateProfile } from "firebase/auth";
-import { useDispatch } from "react-redux";
-import { addUser } from "../utils/userslice";
+ import { useDispatch } from "react-redux";
+ import { addUser } from "../utils/userslice";
 import { photoUrl ,poster } from "../utils/constants";
 
 const Login = () => {
@@ -15,11 +15,11 @@ const Login = () => {
     
     const [errMessage,seterrMessage]=useState(null);
 
-    const dispatch=useDispatch();
+     const dispatch=useDispatch();
 
-    const name=useRef(null); 
-    const email=useRef(null);
-    const password=useRef(null);
+     const name=useRef(null); 
+     const email=useRef(null);
+     const password=useRef(null);
 
     const toggleSignInForm=()=>{
          setisSignInForm(!isSignInForm);
@@ -77,10 +77,10 @@ const Login = () => {
    }
 
     return(
-    <>   
+    <div className="relative w-full h-screen">  
        <div><Header/></div>
-       <div className="absolute">
-        <img src={poster} alt="background-img"></img>
+       <div className="absolute inset-0">
+        <img src={poster} alt="background-img" className="w-full h-full object-cover"></img>
        </div>
        <div>
          <form  onSubmit={(e)=>e.preventDefault()}  className="w-3/12 absolute p-12 bg-black/80 my-36 mx-auto right-0 left-0 text-white rounded-lg ">
@@ -99,7 +99,7 @@ const Login = () => {
             <p className="p-4 cursor-pointer" onClick={toggleSignInForm}>{isSignInForm? "New to Netflix? sign Up Now":"Already registerd? sign In Now"}</p>
          </form>
        </div>
-    </>  
+    </div>  
     )}
 
 export default Login;    

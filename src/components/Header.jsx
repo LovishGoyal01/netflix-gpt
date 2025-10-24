@@ -74,9 +74,9 @@ const Header = () => {
              {SUPPOERTED_LANGUAGES.map(language=><option key={language.identifier} value={language.identifier}>{language.name}</option>)}   
            </select>
         )}
-        <button className="py-2 px-4 mx-8 md:mx-4 my-2 bg-purple-800 text-white rounded-lg m-2" onClick={handleGptSearchClick}> {showGptSearch? "Homepage" : "GPT Search" }</button>
+        <button className="py-2 px-4 mx-0 md:mx-4 my-0 md:my-2 bg-purple-800 text-white rounded-lg m-2" onClick={handleGptSearchClick}> {showGptSearch? "Homepage" : "GPT Search" }</button>
         <img
-          className="w-12 h-12 rounded"
+          className="hidden md:block w-12 h-12 rounded"
           alt="user-icon"
           src={user?.photoURL}
         />

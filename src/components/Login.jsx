@@ -1,12 +1,12 @@
- import { useRef, useState } from "react"
- import Header from "./Header"
- import { checkValidData } from "../utils/validate";
+import { useRef, useState } from "react"
+import Header from "./Header"
+import { checkValidData } from "../utils/validate";
 
 import { createUserWithEmailAndPassword,signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../utils/firebase"
 import { updateProfile } from "firebase/auth";
- import { useDispatch } from "react-redux";
- import { addUser } from "../utils/userslice";
+import { useDispatch } from "react-redux";
+import { addUser } from "../utils/userslice";
 import { photoUrl ,poster } from "../utils/constants";
 
 const Login = () => {

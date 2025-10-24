@@ -61,7 +61,7 @@ const Header = () => {
   }
 
   return (
-    <div className="absolute px-8 py-0 md:py-2 w-full bg-gradient-to-b from-black z-10 flex flex-col md:flex-row justify-between">
+    <div className="absolute  px-8 py-0 md:py-2 w-full bg-gradient-to-b from-black z-10 flex flex-col md:flex-row justify-between">
       <img
         className="w-44 mx-auto md:mx-0"
         src={logo}
@@ -70,11 +70,11 @@ const Header = () => {
      {user && (
         <div className="flex  md:p-2 items-center justify-between space-x-3">
         {showGptSearch && (
-           <select className="p-1 md:p-2 m-1 md:m-2 bg-gray-900 text-white" onChange={handleLanguageChange}>
+           <select className="p-1 md:py-2 md:px-2 m-1 md:m-2 bg-gray-900 text-white" onChange={handleLanguageChange}>
              {SUPPOERTED_LANGUAGES.map(language=><option key={language.identifier} value={language.identifier}>{language.name}</option>)}   
            </select>
         )}
-        <button className="py-2 px-4 mx-0 md:mx-4 my-0 md:my-2 bg-purple-800 text-white rounded-lg m-2" onClick={handleGptSearchClick}> {showGptSearch? "Homepage" : "GPT Search" }</button>
+        <button className="p-2 px-3 mx-0 md:mx-4 my-0 md:my-2 bg-purple-800 text-white rounded-lg m-2" onClick={handleGptSearchClick}> {showGptSearch? "Homepage" : "GPT Search" }</button>
         <img
           className="hidden md:block w-12 h-12 rounded"
           alt="user-icon"

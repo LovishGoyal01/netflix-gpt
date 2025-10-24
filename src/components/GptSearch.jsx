@@ -9,7 +9,7 @@ const GptSearch = () => {
          <div className="relative min-h-screen ">
           <img src={poster} alt="background-img" className="h-screen object-cover fixed md:h-auto md:object-contain"/>
          
-         <div className="relative">
+         <div className="relative ">
            <GptSearchBar/>
            <GptMovieSuggestion/>
           </div> 

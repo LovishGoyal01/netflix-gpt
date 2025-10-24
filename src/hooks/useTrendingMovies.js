@@ -9,7 +9,7 @@ import { addTrendingMovies } from "../utils/movieSlice"
 const useTrendingMovies = () => {
        const dispatch = useDispatch();
        
-        const  trendingMovies = useSelector(store => store.movies.trendingMovies);
+       const  trendingMovies = useSelector(store => store.movies.trendingMovies);
 
     const getTrendingMovies = async () => {
 

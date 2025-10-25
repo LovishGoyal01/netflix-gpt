@@ -83,7 +83,7 @@ const Login = () => {
         <img src={poster} alt="background-img" className="w-full h-full object-cover"></img>
        </div>
        <div>
-         <form  onSubmit={(e)=>e.preventDefault()}  className="w-full  md:w-3/12 absolute p-12 bg-black/80 my-36 mx-auto right-0 left-0 text-white rounded-lg ">
+         <form  onSubmit={(e)=>e.preventDefault()}  className={`w-full  md:w-3/12 absolute p-12 ${isSignInForm ? "my-36" : "my-20"}  bg-black/80  mx-auto right-0 left-0 text-white rounded-lg `}>
            <h1 className="font-bold text-3xl py-4">{isSignInForm? "Sign In":"Sign Up"}</h1>
            { 
              !isSignInForm && <input 
@@ -94,9 +94,9 @@ const Login = () => {
            }
             <input ref={email}  type="text" placeholder="Email address" className="p-4 my-4 bg-[#333] w-full placeholder-gray-400" />
             <input ref={password}  type="password" placeholder="Password" className="p-4 my-4 bg-[#333] w-full placeholder-gray-400" />
-            <p className="text-red-500 font-bold text-lg p-2">{errMessage}</p>
+            <p className="text-red-500 font-bold text- p-1">{errMessage}</p>
             <button className="p-4 my-6 bg-red-700 w-full text-xl font-medium" onClick={handleButtonClick}>{isSignInForm? "Sign In":"Sign Up"}</button>
-            <p className="p-4 cursor-pointer" onClick={toggleSignInForm}>{isSignInForm? "New to Netflix? sign Up Now":"Already registerd? sign In Now"}</p>
+            <p className="p-4 cursor-pointer" onClick={toggleSignInForm}>{isSignInForm? "New to Netflix? Sign Up Now":"Already registerd? Sign In Now"}</p>
          </form>
        </div>
     </div>  

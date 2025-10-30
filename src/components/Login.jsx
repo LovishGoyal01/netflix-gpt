@@ -84,7 +84,7 @@ const Login = () => {
 
       <form
         onSubmit={(e) => e.preventDefault()}
-        className={`w-full md:w-3/12 absolute p-12 ${
+        className={`w-full  absolute p-12 md:w-3/12 md:p-6 ${
           isSignInForm ? "my-36" : "my-20"
         } bg-black/80 mx-auto right-0 left-0 text-white rounded-lg`}
       >

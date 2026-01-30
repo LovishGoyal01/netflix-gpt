@@ -11,34 +11,32 @@ import { useDispatch, useSelector } from "react-redux";
 import { removeGptMovieResult } from "../utils/gptslice";
 
 const Browse = () => {
+  const dispatch = useDispatch();
+  const showGptSearch = useSelector((store) => store.gpt.showGptSearch);
 
-   const dispatch = useDispatch();
-   const showGptSearch=useSelector(store => store.gpt.showGptSearch);
-    
-   useNowPlayingMovies();
-   usePopularMovies();
-   useTopRatedMovies();
-   useTrendingMovies();
-   useUpcomingMovies();
+  useNowPlayingMovies();
+  usePopularMovies();
+  useTopRatedMovies();
+  useTrendingMovies();
+  useUpcomingMovies();
 
-   if(!showGptSearch)
-   {
-     dispatch(removeGptMovieResult());
-   }
+  if (!showGptSearch) {
+    dispatch(removeGptMovieResult());
+  }
 
-    return(
-       <div>
-        <Header/>
-          {showGptSearch ? (
-            <GptSearch/>
-             ) : (
-            <> 
-             <MainContainer/>
-             <SecondaryContainer/>
-            </>
-          )} 
-       </div>
-       
-    )}
+  return (
+    <div>
+      <Header />
+      {showGptSearch ? (
+        <GptSearch />
+      ) : (
+        <>
+          <MainContainer />
+          <SecondaryContainer />
+        </>
+      )}
+    </div>
+  );
+};
 
-export default Browse;    
+export default Browse;

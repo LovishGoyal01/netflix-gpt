@@ -5,7 +5,9 @@ import appstore from './utils/appstore';
 function App() {
  
   return (
-  <Provider store={appstore}> <Body/> </Provider> 
+  <Provider store={appstore}>
+     <Body/>
+  </Provider> 
   )
 }
 

@@ -23,6 +23,7 @@ const gptslice = createSlice({
   },
 });
 
-export const {  toogleGptSearchView, addGptMovieResults, removeGptMovieResult,} = gptslice.actions;
+export const { toogleGptSearchView, addGptMovieResults, removeGptMovieResult } =
+  gptslice.actions;
 
 export default gptslice.reducer;
